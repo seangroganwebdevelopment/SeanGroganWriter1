@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+/* --------------RESEt-------------- */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid lime !important; */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+/* Base styles */
+body {
+  font-family: Merriweather, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+
+/* Styles for the color toggle button */
+#color-toggle {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#color-toggle:hover {
+    background-color: #555;
+}
+
+/* Additional styles for the navbar */
+/* Add your navbar styles here */
+
+section {
+  padding: 2rem;
+  border-bottom: 1px solid #ebe0e0;
+}
+
+#hero {
+  background: url("images/annie-spratt-SVD6o4tOC20-unsplash.jpg") no-repeat
+    center center/cover;
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero .hero-content {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional: adds a dark overlay for better text readability */
+  padding: 1rem;
+}
+
+#hero h1 {
+  font-size: 2.5rem; /* Larger font size for the heading */
+  /* font-family: "Brush Script MT", cursive; Cursive font */
+  margin: 0; /* Remove default margin */
+}
+
+#hero p {
+  font-size: 1.5rem; /* Adjust font size for the paragraph */
+  margin: 0; /* Remove default margin */
+}
+
+h1,
+h2 {
+  margin: 0 0 1rem;
+}
+
+#bio {
+  /* background-color: #f5f5f5; Set a base background color */
+  box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.32),
+    /* Creates a subtle shadow effect */ inset 0 0 100px rgba(111, 32, 32, 0.2); /* Creates highlights to mimic texture */
+}
+
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#contact {
+  background-color: grey;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 0.5rem 0 0.2rem;
+}
+
+form input,
+form textarea,
+form button {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+form button {
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+@media (min-width: 600px) {
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row; /* Arrange links in a row */
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  #hero h1 {
+    font-size: 4rem; /* Larger font size for the heading */
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  #portfolio {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links.show {
+    display: flex;
+  }
+}
